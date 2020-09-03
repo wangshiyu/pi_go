@@ -12,7 +12,7 @@ type DataPacket struct {
 	Body string
 }
 
-func ServerInit() {
+func InitServer() {
 	//绑定端口
 	var tcpAddr, err = net.ResolveTCPAddr("tcp", ":19010")
 	if err != nil {
@@ -28,7 +28,9 @@ func ServerInit() {
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
-			fmt.Println(err.Error())
+			fmt.Printf("连接失败 the error is %v \n", err)
+		} else {
+			fmt.Printf("connect successful,coon is %v client IP is %v  \n", conn, conn.RemoteAddr().String())
 		}
 		go Handler(conn)
 	}

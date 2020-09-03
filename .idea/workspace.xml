@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4f2331b1-3821-41fe-aacc-46b5e2b75eb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pi_client/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pi_common/communication/tcp/NetworkDaemon.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pi_test/pi_common/PiTcpClientTest.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pi_test/pi_common/PiTcpServiceTest.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_common/communication/tcp/tcp_client.go" beforeDir="false" afterPath="$PROJECT_DIR$/pi_common/communication/tcp/tcp_client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_common/communication/tcp/tcp_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/pi_common/communication/tcp/tcp_server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_common/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/pi_common/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_common/pi_common.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_drive/pi_drive.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/pi_server/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_server/pi_server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_test/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_test/pi_common/PiTcpTest.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_test/pi_test.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="u6po5qkq" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../apache-maven-3.6.0/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1gw3Hl8hF2Bo6FiHMH7F4KJS0pl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pi_common" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pi_common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common" />
+      <recent name="$PROJECT_DIR$/pi_server" />
+      <recent name="$PROJECT_DIR$/pi_drive" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build pi_go/pi_test/pi_common">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="pi_go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build PiTcpServiceTest.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pi_go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pi_test/pi_common/PiTcpServiceTest.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build PiTcpTest.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pi_go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pi_test/pi_common/PiTcpTest.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build pi_go/pi_test/pi_common" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pi_go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pi_test/pi_common/PiTcpClientTest.go" />
+      <package value="pi_go/pi_test/pi_common" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build tcp_client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pi_common" />
+      <working_directory value="$PROJECT_DIR$/pi_common" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pi_common/communication/tcp/tcp_client.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build pi_go/pi_test/pi_common" />
+        <item itemvalue="Go Build.go build PiTcpServiceTest.go" />
+        <item itemvalue="Go Build.go build PiTcpTest.go" />
+        <item itemvalue="Go Build.go build tcp_client.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f2331b1-3821-41fe-aacc-46b5e2b75eb7" name="Default Changelist" comment="" />
+      <created>1599011741716</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599011741716</updated>
+      <workItem from="1599011746717" duration="1369000" />
+      <workItem from="1599092949046" duration="520000" />
+      <workItem from="1599093503604" duration="1665000" />
+      <workItem from="1599114633617" duration="6685000" />
+      <workItem from="1599123233759" duration="1325000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="http://goproxy.cn" />
+      </map>
+    </environment>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="520" y="387" key="#GOROOT" timestamp="1599093897476">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="520" y="387" key="#GOROOT/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599011825568" />
+    <state x="520" y="387" key="#GOROOT/0.0.1440.900@0.0.1440.900" timestamp="1599093897476" />
+    <state x="520" y="290" key="#Go_Modules" timestamp="1599011862824">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="520" y="290" key="#Go_Modules/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599011862824" />
+    <state x="417" y="97" key="#go_build_pi_go/pi_test/pi_common" timestamp="1599121377480">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="417" y="97" key="#go_build_pi_go/pi_test/pi_common/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599121377480" />
+    <state x="417" y="96" key="#go_build_tcp_client.go" timestamp="1599119000663">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="417" y="96" key="#go_build_tcp_client.go/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599119000663" />
+    <state width="503" height="466" key="DebuggerActiveHint" timestamp="1599123707440">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="503" height="466" key="DebuggerActiveHint/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123707440" />
+    <state x="622" y="318" key="EnvironmentVariablesDialog" timestamp="1599093191058">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="622" y="318" key="EnvironmentVariablesDialog/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599011857160" />
+    <state x="622" y="318" key="EnvironmentVariablesDialog/0.0.1440.900@0.0.1440.900" timestamp="1599093191058" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1599123830285">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168681" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123830285" />
+    <state width="699" height="245" key="GridCell.Tab.0.bottom/0.23.1440.806/701.-1057.1920.1057/-1219.-1057.1920.1057@0.23.1440.806" timestamp="1599101125608" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1599123830281">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168678" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123830281" />
+    <state width="699" height="245" key="GridCell.Tab.0.center/0.23.1440.806/701.-1057.1920.1057/-1219.-1057.1920.1057@0.23.1440.806" timestamp="1599101125603" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1599123830279">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168676" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123830279" />
+    <state width="699" height="245" key="GridCell.Tab.0.left/0.23.1440.806/701.-1057.1920.1057/-1219.-1057.1920.1057@0.23.1440.806" timestamp="1599101125602" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1599123830283">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168679" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123830283" />
+    <state width="699" height="245" key="GridCell.Tab.0.right/0.23.1440.806/701.-1057.1920.1057/-1219.-1057.1920.1057@0.23.1440.806" timestamp="1599101125607" />
+    <state width="1398" height="187" key="GridCell.Tab.1.bottom" timestamp="1599123825724">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168686" />
+    <state width="1398" height="187" key="GridCell.Tab.1.bottom/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123825724" />
+    <state width="1398" height="187" key="GridCell.Tab.1.center" timestamp="1599123825722">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168683" />
+    <state width="1398" height="187" key="GridCell.Tab.1.center/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123825722" />
+    <state width="1398" height="187" key="GridCell.Tab.1.left" timestamp="1599123825721">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168682" />
+    <state width="1398" height="187" key="GridCell.Tab.1.left/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123825721" />
+    <state width="1398" height="187" key="GridCell.Tab.1.right" timestamp="1599123825723">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900/701.-1057.1920.1057/-1219.-1057.1920.1057@0.0.1440.900" timestamp="1599123168685" />
+    <state width="1398" height="187" key="GridCell.Tab.1.right/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123825723" />
+    <state x="349" y="156" key="NewModule_or_Project.wizard" timestamp="1599118408744">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="349" y="156" key="NewModule_or_Project.wizard/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599118408744" />
+    <state x="208" y="31" key="SettingsEditor" timestamp="1599121791999">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599121791999" />
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1599094755059" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1599122840906">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599122840906" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1599123429877">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123429877" />
+    <state x="500" y="259" key="com.goide.refactor.move.GoMoveDeclarationDialog" timestamp="1599123735566">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="500" y="259" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599123735566" />
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599122134768">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599122134768" />
+    <state x="114" y="94" key="new project wizard" timestamp="1599118600387">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="114" y="94" key="new project wizard/0.0.1440.900/701.-1080.1920.1080/-1219.-1080.1920.1080@0.0.1440.900" timestamp="1599118600387" />
+    <state x="114" y="94" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1599094265750" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1599094675849">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1599094675849" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/pi_test/pi_common/PiTcpClientTest.go</url>
+          <line>5</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/pi_common/communication/tcp/tcp_client.go</url>
+          <line>21</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/pi_common/communication/tcp/tcp_server.go</url>
+          <line>47</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/pi_common/communication/tcp/tcp_server.go</url>
+          <line>55</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/pi_common/communication/tcp/tcp_client.go</url>
+          <line>60</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="DlvErrorBreakpoint" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
