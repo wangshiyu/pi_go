@@ -1,76 +1,49 @@
 package tcp
 
+/** 三步搭建服务端
+    1 定义任意名称struct的数据结构，必须包含Pmap、Phost两个
+      字段，其中Phost为服务端ip+port拼接的字符串，Pmap为自定
+      义数据包类型与数据包名称的映射。
+    2 实例化对象为字段赋值，实现对应已定义`包名称`的数据包处
+      理方法，方法名必为"P[包名称]",如type包的处理方法为Ptype
+      。方法中请定义数据处理逻辑,输入输入皆为[]byte类型。
+    3 stpro.New()传入实例化的对象，如无报错则服务端开始监听，
+      并按照你所定义的逻辑处理数据包，返回响应数据。
+**/
+
 import (
-	"encoding/binary"
-	"encoding/hex"
 	"fmt"
-	"net"
+	"pi_common/communication/tcp/stpro"
 )
 
-type DataPacket struct {
-	Type string
-	Body string
+type Server struct {
+	Phost string
+	Pmap  map[uint8]string
+}
+
+func (m Server) Ptype(in []byte) (out []byte) {
+	fmt.Printf("客户端发来type包:%s\n", in)
+	/** process... **/
+	bytes := []byte("hello1")
+	return bytes
+}
+
+func (m Server) Pname(in []byte) (out []byte) {
+	fmt.Printf("客户端发来name包:%s\n", in)
+	/** process... **/
+	bytes := []byte("hello2")
+	return bytes
 }
 
 func InitServer() {
-	//绑定端口
-	var tcpAddr, err = net.ResolveTCPAddr("tcp", ":19010")
+	m := Server{
+		Phost: ":9091",
+		Pmap:  make(map[uint8]string),
+	}
+	m.Pmap[0x01] = "type"
+	m.Pmap[0x02] = "name"
+	err := stpro.New(m)
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Println(err)
 	}
-	//监听
-	listener, err := net.ListenTCP("tcp", tcpAddr)
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-	defer listener.Close()
-	//开始接收数据
-	for {
-		conn, err := listener.Accept()
-		if err != nil {
-			fmt.Printf("连接失败 the error is %v \n", err)
-		} else {
-			fmt.Printf("connect successful,coon is %v client IP is %v  \n", conn, conn.RemoteAddr().String())
-		}
-		go Handler(conn)
-	}
-
-}
-
-func Handler(conn net.Conn) {
-	defer conn.Close()
-	//每次读取数据长度
-	buf := make([]byte, 256)
-	_, err := conn.Read(buf)
-	if err != nil {
-		return
-	}
-	result, Body := check(buf)
-	if result {
-		fmt.Printf("接收到报文内容:{%s}\n", hex.EncodeToString(Body))
-	}
-
-}
-
-func check(buf []byte) (bool, []byte) {
-	Length := DataLength(buf)
-	if Length < 3 || Length > 256 {
-		return false, nil
-	}
-	Body := buf[:Length]
-	return uint16(len(Body))-2 != Length, Body
-}
-
-func DataLength(buf []byte) uint16 {
-	return binary.BigEndian.Uint16(inversion(buf[:2])) + 2
-}
-
-//反转字节
-func inversion(buf []byte) []byte {
-	for i := 0; i < len(buf)/2; i++ {
-		temp := buf[i]
-		buf[i] = buf[len(buf)-1-i]
-		buf[len(buf)-1-i] = temp
-	}
-	return buf
 }
