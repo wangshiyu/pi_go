@@ -13,13 +13,14 @@ import (
 )
 
 const (
-	MAP_NAME  = "Pmap"
-	HOST_NAME = "Phost"
+	MapName  = "Pmap"
+	HostName = "Phost"
 )
 
 type Server struct {
 	LAddr    *net.TCPAddr
 	Listener *net.TCPListener
+	ConnMap  map[string]*net.Conn
 }
 
 var (
@@ -34,6 +35,7 @@ var (
 )
 
 func (srv *Server) initialize(v interface{}) error {
+	srv.ConnMap = make(map[string]*net.Conn)
 	vTyp = reflect.TypeOf(v)
 	vVal = reflect.ValueOf(v)
 	err := srv.checkField()
@@ -63,8 +65,9 @@ func (srv *Server) launch() error {
 			err = errors.New("launch error: server accepted failed from " + conn.RemoteAddr().String())
 			return err
 		} else {
-			fmt.Printf("connect successful,coon is %v client IP is %v  \n", conn, conn.RemoteAddr().String())
+			fmt.Printf("connect successful client IP is %v  \n", conn.RemoteAddr().String())
 		}
+		srv.ConnMap[conn.RemoteAddr().String()] = &conn
 		go srv.handle(conn)
 	}
 	return nil
@@ -100,14 +103,14 @@ func (srv *Server) checkField() error {
 }
 
 func commonFieldCheck() (*net.TCPAddr, error) {
-	_, flag := vTyp.FieldByName(HOST_NAME)
+	_, flag := vTyp.FieldByName(HostName)
 	if !flag {
-		err := errors.New("init error: field `" + HOST_NAME + "` not found.")
+		err := errors.New("init error: field `" + HostName + "` not found.")
 		return nil, err
 	}
-	fieldStruct, flag := vTyp.FieldByName(MAP_NAME)
+	fieldStruct, flag := vTyp.FieldByName(MapName)
 	if !flag {
-		err := errors.New("init error: field `" + MAP_NAME + "` not found.")
+		err := errors.New("init error: field `" + MapName + "` not found.")
 		return nil, err
 	}
 	mapType := fieldStruct.Type
@@ -115,11 +118,11 @@ func commonFieldCheck() (*net.TCPAddr, error) {
 		err := errors.New("init error: the type of `Pmap` field is supposed to be " + mapTypeString + ".")
 		return nil, err
 	}
-	hostVal := vVal.FieldByName(HOST_NAME).Interface()
+	hostVal := vVal.FieldByName(HostName).Interface()
 	host := string(hostVal.(string))
 	rawHost := strings.TrimSpace(host)
 	if len(rawHost) < 1 {
-		err := errors.New("init error: value of `" + HOST_NAME + "` has not been assigned.")
+		err := errors.New("init error: value of `" + HostName + "` has not been assigned.")
 		return nil, err
 	}
 	Laddr, err := net.ResolveTCPAddr("tcp", rawHost)
@@ -127,7 +130,7 @@ func commonFieldCheck() (*net.TCPAddr, error) {
 		err = errors.New("init error: " + err.Error() + ".")
 		return nil, err
 	}
-	mapVal := vVal.FieldByName(MAP_NAME).Interface()
+	mapVal := vVal.FieldByName(MapName).Interface()
 	originMap = map[byte]string(mapVal.(map[byte]string))
 	moduleNum = len(originMap)
 	for index, value := range originMap {
