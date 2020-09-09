@@ -1,7 +1,13 @@
 package main
 
-import "pi_common/communication/tcp"
+import (
+	"pi_common/communication/tcp"
+	"time"
+)
 
 func main() {
-	tcp.InitServer()
+	tcp.InitTcpServerCore()
+	for true {
+		time.Sleep(10000)
+	}
 }

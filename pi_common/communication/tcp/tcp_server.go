@@ -13,37 +13,46 @@ package tcp
 
 import (
 	"fmt"
+	"net"
 	"pi_common/communication/tcp/stpro"
 )
 
-type Server struct {
-	Phost string
-	Pmap  map[uint8]string
+type ServerCore struct {
+	Host    string
+	Pmap    map[uint8]string
+	AuthMap map[string]string
+	Server  *stpro.Server
 }
 
-func (m Server) Ptype(in []byte) (out []byte) {
+func (p ServerCore) Pauth(in []byte, coun *net.Conn) (out []byte) {
 	fmt.Printf("客户端发来type包:%s\n", in)
+	fmt.Printf("connect client IP is %v  \n",(*coun).RemoteAddr().String())
 	/** process... **/
 	bytes := []byte("hello1")
 	return bytes
 }
 
-func (m Server) Pname(in []byte) (out []byte) {
+func (p ServerCore) Pname(in []byte, coun *net.Conn) (out []byte) {
 	fmt.Printf("客户端发来name包:%s\n", in)
+	fmt.Printf("connect client IP is %v  \n",(*coun).RemoteAddr().String())
 	/** process... **/
 	bytes := []byte("hello2")
 	return bytes
 }
 
-func InitServer() {
-	m := Server{
-		Phost: ":9091",
-		Pmap:  make(map[uint8]string),
+func InitTcpServerCore() (*ServerCore, error) {
+	ServerCore := ServerCore{
+		Host: ":9091",
+		Pmap: make(map[uint8]string),
 	}
-	m.Pmap[0x01] = "type"
-	m.Pmap[0x02] = "name"
-	err := stpro.New(m)
+	ServerCore.Pmap[0x01] = "auth"
+	ServerCore.Pmap[0x02] = "name"
+	Server, err := stpro.New(ServerCore)
+	if Server != nil {
+		ServerCore.Server = Server
+	}
 	if err != nil {
 		fmt.Println(err)
 	}
+	return &ServerCore, err
 }

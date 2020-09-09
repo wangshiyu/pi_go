@@ -6,12 +6,12 @@ import (
 )
 
 type Client2 struct {
-	Phost  string
+	Host  string
 	Pmap   map[byte]string
 	Client *stpro.Client
 }
 
-func (c Client2) Ptype(in []byte) {
+func (c Client2) Pauth(in []byte) {
 	fmt.Printf("收到了type包的回复:%s\n", in)
 }
 
@@ -21,9 +21,9 @@ func (c Client2) Pname(in []byte) {
 
 func ClientInit() {
 	var a1 = Client2{
-		Phost: "localhost:9091",
+		Host: "localhost:9091",
 		Pmap: map[byte]string{
-			0x01: "type",
+			0x01: "auth",
 			0x02: "name",
 		},
 	}

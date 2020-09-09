@@ -14,14 +14,8 @@ import (
 
 const (
 	MapName  = "Pmap"
-	HostName = "Phost"
+	HostName = "Host"
 )
-
-type Server struct {
-	LAddr    *net.TCPAddr
-	Listener *net.TCPListener
-	ConnMap  map[string]*net.Conn
-}
 
 var (
 	vTyp          = *new(reflect.Type)
@@ -33,6 +27,12 @@ var (
 	moduleNames   = map[string]*byte{}
 	mapNameFunc   = map[string]reflect.Value{}
 )
+
+type Server struct {
+	LAddr    *net.TCPAddr
+	Listener *net.TCPListener
+	ConnMap  map[string]*net.Conn
+}
 
 func (srv *Server) initialize(v interface{}) error {
 	srv.ConnMap = make(map[string]*net.Conn)
@@ -85,7 +85,12 @@ func (srv *Server) process(taskChan chan []byte, conn net.Conn) {
 	for recvBuffer := range taskChan {
 		packetType := recvBuffer[0]
 		data := recvBuffer[1:]
-		tempReturn := mapNameFunc[originMap[packetType]].Call([]reflect.Value{vVal, reflect.ValueOf(data)})
+		inp := make([]reflect.Value, 3)
+		inp[0] = vVal
+		inp[1] = reflect.ValueOf(data)
+		inp[2] = reflect.ValueOf(&conn)
+		//tempReturn := mapNameFunc[originMap[packetType]].Call([]reflect.Value{vVal, reflect.ValueOf(data)})
+		tempReturn := mapNameFunc[originMap[packetType]].Call(inp)
 		ret := enPacket(packetType, tempReturn[0].Interface().([]byte))
 		bufferWriter := bufio.NewWriter(conn)
 		bufferWriter.Write(ret)
@@ -172,15 +177,20 @@ func commonMethodCheck() error {
 	return nil
 }
 
-func New(v interface{}) error {
+func New(v interface{}) (*Server, error) {
 	server := &Server{}
 	err := server.initialize(v)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	err = server.launch()
+	go launch(server)
+	return server, nil
+}
+
+func launch(server *Server) error {
+	err := server.launch()
 	if err != nil {
 		return err
 	}
-	return nil
+	return err
 }
